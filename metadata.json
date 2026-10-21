@@ -1,0 +1,6 @@
+{
+  "name": "JARVIS Holographic HUD",
+  "description": "Cinematic futuristic JARVIS holographic heads-up display command interface with animated concentric multi-speed rings, telemetry frames, and interactive state controller.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

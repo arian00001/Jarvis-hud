@@ -1,0 +1,186 @@
+/* HUD Animation Keyframes */
+
+@keyframes rotate-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-ccw {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes core-breathe {
+  0%, 100% {
+    transform: scale(0.97);
+    opacity: 0.88;
+    filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.45));
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: drop-shadow(0 0 28px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 45px rgba(0, 102, 255, 0.6));
+  }
+}
+
+@keyframes core-pulse-listening {
+  0%, 100% {
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.6));
+  }
+  50% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 35px rgba(0, 240, 255, 0.95)) drop-shadow(0 0 60px rgba(0, 200, 255, 0.7));
+  }
+}
+
+@keyframes core-pulse-thinking {
+  0% {
+    transform: scale(0.96) rotate(0deg);
+    filter: drop-shadow(0 0 18px rgba(0, 240, 255, 0.7));
+  }
+  50% {
+    transform: scale(1.08) rotate(180deg);
+    filter: drop-shadow(0 0 38px rgba(112, 247, 255, 0.95));
+  }
+  100% {
+    transform: scale(0.96) rotate(360deg);
+    filter: drop-shadow(0 0 18px rgba(0, 240, 255, 0.7));
+  }
+}
+
+@keyframes core-pulse-speaking {
+  0%, 100% {
+    transform: scale(0.94);
+    opacity: 0.85;
+  }
+  25% {
+    transform: scale(1.09);
+    opacity: 1;
+    filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.9));
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.92;
+  }
+  75% {
+    transform: scale(1.14);
+    opacity: 1;
+    filter: drop-shadow(0 0 42px rgba(0, 240, 255, 1)) drop-shadow(0 0 65px rgba(0, 102, 255, 0.7));
+  }
+}
+
+@keyframes error-flash {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(255, 42, 95, 0.9));
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    filter: drop-shadow(0 0 6px rgba(255, 42, 95, 0.4));
+    transform: scale(0.96);
+  }
+}
+
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scanline-pass {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes ambient-glow {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes highlight-crawl {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Base Classes */
+.animate-rotate-cw {
+  animation: rotate-cw var(--spin-duration, 20s) linear infinite;
+}
+
+.animate-rotate-ccw {
+  animation: rotate-ccw var(--spin-duration, 16s) linear infinite;
+}
+
+.animate-breathe {
+  animation: core-breathe 4s ease-in-out infinite;
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+.animate-ambient {
+  animation: ambient-glow 8s ease-in-out infinite;
+}
+
+.animate-scanline {
+  animation: scanline-pass 12s linear infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
+
+/* Reduced Motion Overrides */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}

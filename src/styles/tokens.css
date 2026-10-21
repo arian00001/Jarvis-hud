@@ -1,0 +1,90 @@
+:root {
+  /* Holographic HUD Color Palette - Default MARK-85 Stark Cyan */
+  --hud-bg: #020713;
+  --hud-bg-elevated: #051329;
+  --hud-bg-translucent: rgba(5, 19, 41, 0.75);
+  
+  --hud-cyan: #00f0ff;
+  --hud-cyan-bright: #70f7ff;
+  --hud-cyan-dim: rgba(0, 240, 255, 0.22);
+  --hud-cyan-border: rgba(0, 240, 255, 0.4);
+  --hud-cyan-faint: rgba(0, 240, 255, 0.08);
+
+  --hud-blue: #0066ff;
+  --hud-blue-electric: #0284c7;
+  --hud-blue-deep: #0b1f4d;
+
+  --hud-white: #ffffff;
+  --hud-white-dim: rgba(255, 255, 255, 0.7);
+  --hud-pale-cyan: #e0f7ff;
+
+  --hud-warning: #ff2a5f;
+  --hud-warning-dim: rgba(255, 42, 95, 0.25);
+  --hud-warning-border: rgba(255, 42, 95, 0.5);
+  --hud-warning-glow: 0 0 25px rgba(255, 42, 95, 0.65);
+
+  --hud-glow-cyan: 0 0 15px rgba(0, 240, 255, 0.5);
+  --hud-glow-cyan-strong: 0 0 25px rgba(0, 240, 255, 0.75), 0 0 50px rgba(0, 102, 255, 0.4);
+  --hud-glow-blue: 0 0 20px rgba(0, 102, 255, 0.5);
+
+  --font-hud: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --reactor-size: min(78vw, 70vh, 480px);
+  --frame-stroke: 1.5px;
+  --frame-stroke-thin: 1px;
+}
+
+/* HUD 1: MARK-85 ARC QUANTUM (Classic Stark Electric Cyan) */
+[data-hud-style="MARK_85"], [data-theme="cyan"] {
+  --hud-bg: #020713;
+  --hud-bg-elevated: #051329;
+  --hud-bg-translucent: rgba(5, 19, 41, 0.75);
+  --hud-cyan: #00f0ff;
+  --hud-cyan-bright: #70f7ff;
+  --hud-cyan-dim: rgba(0, 240, 255, 0.22);
+  --hud-cyan-border: rgba(0, 240, 255, 0.4);
+  --hud-cyan-faint: rgba(0, 240, 255, 0.08);
+  --hud-blue: #0066ff;
+  --hud-blue-electric: #0284c7;
+  --hud-blue-deep: #0b1f4d;
+  --hud-glow-cyan: 0 0 15px rgba(0, 240, 255, 0.5);
+  --hud-glow-cyan-strong: 0 0 25px rgba(0, 240, 255, 0.75), 0 0 50px rgba(0, 102, 255, 0.4);
+  --hud-glow-blue: 0 0 20px rgba(0, 102, 255, 0.5);
+}
+
+/* HUD 2: VERONICA PROTOCOL (Heavy Orbital Armor Solar Amber / Gold) */
+[data-hud-style="VERONICA"], [data-theme="amber"] {
+  --hud-bg: #0a0702;
+  --hud-bg-elevated: #1f1404;
+  --hud-bg-translucent: rgba(31, 20, 4, 0.8);
+  --hud-cyan: #fbbf24;
+  --hud-cyan-bright: #fef08a;
+  --hud-cyan-dim: rgba(251, 191, 36, 0.25);
+  --hud-cyan-border: rgba(251, 191, 36, 0.45);
+  --hud-cyan-faint: rgba(251, 191, 36, 0.09);
+  --hud-blue: #d97706;
+  --hud-blue-electric: #f59e0b;
+  --hud-blue-deep: #78350f;
+  --hud-glow-cyan: 0 0 15px rgba(251, 191, 36, 0.55);
+  --hud-glow-cyan-strong: 0 0 25px rgba(251, 191, 36, 0.8), 0 0 50px rgba(217, 119, 6, 0.45);
+  --hud-glow-blue: 0 0 20px rgba(217, 119, 6, 0.5);
+}
+
+/* HUD 3: CHRONOS QUANTUM NEXUS (Emerald Matrix / Tri-Radial Tesseract) */
+[data-hud-style="CHRONOS"], [data-theme="emerald"], [data-theme="lime"] {
+  --hud-bg: #021209;
+  --hud-bg-elevated: #042415;
+  --hud-bg-translucent: rgba(4, 36, 21, 0.8);
+  --hud-cyan: #00ff88;
+  --hud-cyan-bright: #a7f3d0;
+  --hud-cyan-dim: rgba(0, 255, 136, 0.22);
+  --hud-cyan-border: rgba(0, 255, 136, 0.45);
+  --hud-cyan-faint: rgba(0, 255, 136, 0.08);
+  --hud-blue: #059669;
+  --hud-blue-electric: #10b981;
+  --hud-blue-deep: #064e3b;
+  --hud-glow-cyan: 0 0 15px rgba(0, 255, 136, 0.5);
+  --hud-glow-cyan-strong: 0 0 25px rgba(0, 255, 136, 0.75), 0 0 50px rgba(5, 150, 105, 0.4);
+  --hud-glow-blue: 0 0 20px rgba(5, 150, 105, 0.5);
+}

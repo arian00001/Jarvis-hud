@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+@import "./styles/animations.css";
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #020713;
+  color: #ffffff;
+  font-family: var(--font-hud);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}
